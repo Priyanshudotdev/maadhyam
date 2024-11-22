@@ -1,18 +1,11 @@
-import React from "react";
-import { contact, service1, service3 } from "../assets";
-import { useEffect } from "react";
 import {
-    useMotionTemplate,
-    motion,
-    useMotionValue,
     animate,
+    motion,
+    useMotionTemplate,
+    useMotionValue,
 } from "framer-motion";
-import {
-    FaXTwitter,
-    FaLinkedinIn,
-    FaInstagram,
-    FaTwitter,
-} from "react-icons/fa6";
+import React, { useEffect } from "react";
+import { FaInstagram } from "react-icons/fa6";
 
 import { MdOutlineEmail } from "react-icons/md";
 
@@ -46,7 +39,7 @@ const Contact = () => {
             <div className="flex flex-col gap-5 overflow-hidden lg:min-h-[38rem] ">
                 <div className="w-full h-full rounded-3xl overflow-hidden ">
                     <img
-                        src="https://ycce.edu/wp-content/uploads/2024/03/YCCE-Information-Technology-Department-768x468.jpg"
+                        src="https://res.cloudinary.com/priyanshukayarkar/image/upload/v1732295079/YCCE-Information-Technology-Department-768x468_hqvezx.jpg"
                         className="w-full h-full bg-cover "
                         alt="IT-DEPARTMENT"
                     />

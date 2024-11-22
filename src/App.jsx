@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 import { FloatingNav } from "./Components/FloatingNavbar";
 import Footer from "./Components/Footer";
+import NativeJoin from "./Components/NativeJoin";
 import Service from "./Components/Services";
 import Contact from "./Pages/Contact";
 import { AuroraHero } from "./Pages/Hero";
 import LaunchEvent from "./Pages/LaunchEvent";
-import NativeJoin from "./Components/NativeJoin";
 
 function App() {
     const heroRef = useRef(null);

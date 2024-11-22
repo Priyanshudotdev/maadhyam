@@ -5,7 +5,6 @@ import {
     useMotionValue,
 } from "framer-motion";
 import { useEffect } from "react";
-import { service1, service2, service3 } from "../assets";
 
 const COLORS_TOP = ["#480CA8", "#DD335C", "#6366f1", "#9105FF"];
 const Services = () => {
@@ -47,7 +46,7 @@ const Services = () => {
                             height={730}
                             width={790}
                             alt="Smartest AI"
-                            src={service1}
+                            src="https://res.cloudinary.com/priyanshukayarkar/image/upload/v1732293380/service-1_wlau57.png"
                         />
                     </div>
                     <div className="relative z-1 sm:max-w-[25rem] max-w-[20rem] ml-auto ">
@@ -76,7 +75,9 @@ const Services = () => {
                 <div className="relative min-h-[39rem] bg-[#111111] rounded-3xl  overflow-hidden ">
                     <div className="absolute inset-0">
                         <img
-                            src={service2}
+                            src={
+                                "https://res.cloudinary.com/priyanshukayarkar/image/upload/v1732293379/service-2_w6mxfq.png"
+                            }
                             className="w-full h-full object-cover"
                             width={630}
                             height={750}
@@ -112,7 +113,9 @@ const Services = () => {
                     </div>
                     <div className="relative h-[20rem] bg-zinc-950/80 rounded-xl overflow-hidden md:h-[25rem] ">
                         <img
-                            src={service3}
+                            src={
+                                "https://res.cloudinary.com/priyanshukayarkar/image/upload/v1732293378/service-3_amgcru.png"
+                            }
                             width={520}
                             height={400}
                             className="w-full h-full object-cover"

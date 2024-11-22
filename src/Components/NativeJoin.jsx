@@ -84,7 +84,7 @@ const NativeJoin = () => {
                         className={`p-2 w-full rounded text-black ${
                             isLoading
                                 ? "bg-gray-400 cursor-not-allowed"
-                                : "bg-zinc-100 text-white hover:opacity-[.6] active:opacity-[.4]"
+                                : "bg-zinc-100 hover:opacity-[.6] active:opacity-[.4]"
                         }`}
                     >
                         {isLoading ? (

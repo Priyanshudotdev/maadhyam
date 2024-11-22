@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { service1 } from "../assets";
 import {
     useMotionTemplate,
     useMotionValue,
@@ -113,7 +112,9 @@ const LaunchEvent = () => {
                     <div className="absolute overflow-hidden top-0  left-0 w-full md:w-[95%] h-full pointer-events-none">
                         <img
                             className="w-full h-full rounded-3xl object-cover opacity-10"
-                            src={service1}
+                            src={
+                                "https://res.cloudinary.com/priyanshukayarkar/image/upload/v1732293380/service-1_wlau57.png"
+                            }
                             alt="Background"
                         />
                     </div>
