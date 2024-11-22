@@ -26,19 +26,21 @@ const Footer = () => {
 
                 <ul className="flex gap-5 flex-wrap ">
                     <a
-                        href=""
+                        href="https://x.com/Priyanshu_twi"
                         className="flex items-center justify-center w-10  h-10 bg-zinc-900 rounded-full transition-colors hover:bg-zinc-800 cursor-pointer "
                         target="_blank"
                     >
                         <FaXTwitter />
                     </a>
                     <a
+                        href="https://in.linkedin.com/in/priyanshu-li"
                         className="flex items-center justify-center w-10  h-10 bg-zinc-900 rounded-full transition-colors hover:bg-zinc-800 cursor-pointer "
                         target="_blank"
                     >
                         <FaLinkedinIn />
                     </a>
                     <a
+                        href="https://github.com/Priyanshudotdev"
                         className="flex items-center justify-center w-10  h-10 bg-zinc-900 rounded-full transition-colors hover:bg-zinc-800 cursor-pointer "
                         target="_blank"
                     >
