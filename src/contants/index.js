@@ -53,7 +53,7 @@ export const designTeam = [
   {
     name: "SAMIKSHA PACHPOR",
     imageUrl:
-      "https://res.cloudinary.com/priyanshukayarkar/image/upload/v1737813702/IMG_20230816_114720_-_Samiksha_Pachpor_q2yxzb.jpg",
+      "https://res.cloudinary.com/priyanshukayarkar/image/upload/v1737818267/Redesigned-CSD_2_ojv4gy.png",
   },
 ];
 
