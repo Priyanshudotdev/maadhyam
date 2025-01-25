@@ -7,11 +7,6 @@ import { AuroraHero } from "./Pages/Hero";
 import LaunchEvent from "./Pages/LaunchEvent";
 
 function App() {
-  const navItems = [
-    { name: "Team", link: "/team" },
-    { name: "Previous year magazine", link: "/previous-year-magazine" },
-  ];
-
   return (
     <>
       <div className="w-full min-h-screen bg-transparent font-space text-[#f2f2f2]">
@@ -29,9 +24,6 @@ function App() {
         </div>
         <div className="px-5 bg-transparent sm:hidden">
           <NativeJoin />
-        </div>
-        <div className="px-5">
-          <Footer />
         </div>
       </div>
     </>

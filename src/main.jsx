@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Team from "./Pages/Team.jsx";
 import PreviousYearMagazine from "./Pages/PreviousYearMagazine.jsx";
 import { FloatingNavbar } from "./Components/FloatingNavbar.jsx";
+import Footer from "./Components/Footer.jsx";
 
 const navItems = [
   { name: "Team", link: "/team" },
@@ -23,5 +24,8 @@ createRoot(document.getElementById("root")).render(
         path="/previous-year-magazine"
       ></Route>
     </Routes>
+    <div className="px-5">
+      <Footer />
+    </div>
   </Router>
 );
