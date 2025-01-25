@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { FloatingNav } from "./Components/FloatingNavbar";
+import { FloatingNavbar } from "./Components/FloatingNavbar";
 import Footer from "./Components/Footer";
 import NativeJoin from "./Components/NativeJoin";
 import Service from "./Components/Services";
@@ -17,74 +17,31 @@ function App() {
   const headsRef = useRef(null);
 
   const navItems = [
-    { name: "Launch Event", link: "launchEvent" },
-    { name: "Details", link: "details" },
-    { name: "Heads", link: "heads" },
-    { name: "Contact Us", link: "contact" },
+    { name: "Team", link: "/team" },
+    { name: "Previous year magazine", link: "/previous-year-magazine" },
   ];
-
-  const handleNavClick = (link) => {
-    const scrollToRef = {
-      hero: heroRef,
-      contact: contactRef,
-      launchEvent: launchEventRef,
-      details: serviceRef,
-      heads: headsRef,
-    };
-
-    const targetRef = scrollToRef[link];
-    if (targetRef?.current) {
-      targetRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
-
-  const handleButtonClick = () => {
-    const scrollToRef = {
-      join: joinRef,
-    };
-
-    const targetRef = scrollToRef["join"];
-    if (targetRef?.current) {
-      targetRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
 
   return (
     <>
-      <FloatingNav navItems={navItems} onNavClick={handleNavClick} />
+      <FloatingNavbar navItems={navItems} />
 
       <div className="w-full min-h-screen bg-transparent font-space text-[#f2f2f2]">
         <div ref={heroRef}>
-          <AuroraHero onButtonClick={handleButtonClick} />
+          <AuroraHero />
         </div>
-        <div
-          className="px-5 bg-transparent md:px-6 lg:px-8"
-          ref={launchEventRef}
-        >
+        <div className="px-5 bg-transparent md:px-6 lg:px-8">
           <LaunchEvent />
         </div>
-        <div
-          className="px-5 min-h-screen bg-transparent md:px-6 lg:px-8"
-          ref={serviceRef}
-        >
+        <div className="px-5 min-h-screen bg-transparent md:px-6 lg:px-8">
           <Service />
         </div>
-        <div className="px-5 bg-transparent md:px-6 lg:px-8" ref={headsRef}>
+        <div className="px-5 bg-transparent md:px-6 lg:px-8">
           <MagazineHead />
         </div>
-        <div
-          className="px-5 min-h-screen bg-transparent md:px-6 lg:px-8"
-          ref={contactRef}
-        >
+        <div className="px-5 min-h-screen bg-transparent md:px-6 lg:px-8">
           <Contact />
         </div>
-        <div ref={joinRef} className="px-5 bg-transparent sm:hidden">
+        <div className="px-5 bg-transparent sm:hidden">
           <NativeJoin />
         </div>
         <div className="px-5">
