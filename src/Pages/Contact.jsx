@@ -8,7 +8,6 @@ import React, { useEffect } from "react";
 import { FaInstagram } from "react-icons/fa6";
 
 import { MdOutlineEmail } from "react-icons/md";
-import MagazineHead from "../Components/MagazineHead";
 
 const Contact = () => {
   const COLORS_TOP = ["#ff2600", "#fa3e0e", "#ff0000"];

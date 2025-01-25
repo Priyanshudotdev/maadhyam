@@ -24,7 +24,7 @@ const Services = () => {
 
   return (
     <section className="w-full bg-neutral-950 mt-20 min-h-screen">
-      <div className="container mx-auto px-2 sm:px-4 ">
+      <div className=" {container} {mx-auto px-2 sm:px-4} ">
         <h1 className="max-w-[50rem] text-2xl md:text-[2.8rem] lg:text-[3.3rem] mx-auto mb-12 lg:mb-20 md:text-center">
           <span className="font-qw text-[2.8rem] md:text-[3.8rem] lg:text-[5rem]">
             Magzine

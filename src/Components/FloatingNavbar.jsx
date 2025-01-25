@@ -5,22 +5,18 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
-import { Link, useNavigate, useNavigation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Join from "./Join";
 
 const cn = (...classes) => {
   return classes.filter(Boolean).join(" ");
 };
 
-const onNavClick = () => {
-  const navigate = useNavigation();
-  navigate("/team");
-};
-
 export const FloatingNavbar = ({ navItems, className }) => {
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,6 +40,11 @@ export const FloatingNavbar = ({ navItems, className }) => {
     }
   });
 
+  const handleNavigation = (link) => {
+    navigate(link);
+    setIsMenuOpen(false); // Close menu after navigation
+  };
+
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -59,16 +60,20 @@ export const FloatingNavbar = ({ navItems, className }) => {
         )}
       >
         <h1
-          onClick={() => onNavClick()}
-          className="cursor-pointer text-2xl font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.purple.400),theme(colors.purple.500),theme(colors.pink.300),theme(colors.violet.300),theme(colors.purple.400),theme(colors.purple.100),theme(colors.purple.400))] bg-[length:200%_auto] ml-0"
+          onClick={() => handleNavigation("/")}
+          className="cursor-pointer text-2xl font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.purple.400),theme(colors.purple.500),theme(colors.pink.300),theme(colors.violet.300),theme(colors.purple.400),theme(colors.purple.100),theme(colors.purple.400))] bg-[length:200%_auto] backdrop-blur-sm mt-3  ml-0"
         >
-          MY25
+          <img
+            src="https://res.cloudinary.com/priyanshukayarkar/image/upload/v1737792631/Redesigned-CSD_1_l8dpzu.png"
+            width={50}
+            alt=""
+          />
         </h1>
         <div className="hidden sm:flex items-center space-x-12 ml-auto">
           {navItems.map((navItem, idx) => (
             <button
               key={`link-${idx}`}
-              onClick={() => onNavClick()}
+              onClick={() => handleNavigation(navItem.link)}
               className="relative text-neutral-50 items-center flex space-x-1 hover:text-neutral-300"
             >
               <span className="text-sm">{navItem.name}</span>
@@ -92,18 +97,18 @@ export const FloatingNavbar = ({ navItems, className }) => {
                 rotate: isMenuOpen ? 45 : 0,
                 y: isMenuOpen ? 6 : 0,
               }}
-              className="w-full h-0.5 bg-white transition-all"
+              className="w-full h-[1.5px] bg-zinc-300 transition-all"
             ></motion.span>
             <motion.span
               animate={{ opacity: isMenuOpen ? 0 : 1 }}
-              className="w-full h-0.5 bg-white transition-all"
+              className="w-full h-[1.5px] bg-zinc-300 transition-all"
             ></motion.span>
             <motion.span
               animate={{
                 rotate: isMenuOpen ? -45 : 0,
                 y: isMenuOpen ? -6 : 0,
               }}
-              className="w-full h-0.5 bg-white transition-all"
+              className="w-full h-[1.5px] bg-zinc-300 transition-all"
             ></motion.span>
           </motion.div>
         </button>
@@ -114,7 +119,7 @@ export const FloatingNavbar = ({ navItems, className }) => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="absolute top-[4rem] left-0 right-0 bg-black/90 backdrop-blur-lg sm:hidden"
+              className="absolute top-[4rem] h-screen left-0 right-0 bg-black/50 backdrop-blur-lg sm:hidden"
             >
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
@@ -125,10 +130,7 @@ export const FloatingNavbar = ({ navItems, className }) => {
                 {navItems.map((navItem, idx) => (
                   <motion.button
                     key={`mobile-link-${idx}`}
-                    onClick={() => {
-                      onNavClick(navItem.link);
-                      setIsMenuOpen(false);
-                    }}
+                    onClick={() => handleNavigation(navItem.link)}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     className="text-neutral-50 hover:text-neutral-300"
