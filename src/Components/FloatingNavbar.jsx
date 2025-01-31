@@ -79,8 +79,11 @@ export const FloatingNavbar = ({ navItems, className }) => {
               <span className="text-sm">{navItem.name}</span>
             </button>
           ))}
-          <button className="border text-sm font-medium relative border-white/[0.2] text-white px-4 py-2 rounded-full hover:bg-zinc-800/80">
-            <Join text={"Join Us"} />
+          <button
+            onClick={() => navigate("/read")}
+            className="border text-sm font-medium relative border-white/[0.2] text-white px-4 py-2 rounded-full hover:bg-zinc-800/80"
+          >
+            Experience Magazine
           </button>
         </div>
         <button

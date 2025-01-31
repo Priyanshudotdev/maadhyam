@@ -1,17 +1,12 @@
-import React, { useEffect } from "react";
-import { FiArrowRight } from "react-icons/fi";
 import {
+  animate,
+  motion,
   useMotionTemplate,
   useMotionValue,
-  motion,
-  animate,
 } from "framer-motion";
-import Join from "../Components/Join";
-
-// ,#1E67C6
-// ,
-
-// blue => "#1E67C6"
+import React, { useEffect } from "react";
+import { FiArrowRight } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 const COLORS_TOP = ["#480CA8", "#DD335C", "#6366f1", "#9105FF"];
 
@@ -31,6 +26,8 @@ export const AuroraHero = () => {
   const border = useMotionTemplate`1px solid ${color}`;
   const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
   const textColor = useMotionTemplate`${color}`;
+
+  const navigate = useNavigate();
   return (
     <motion.section
       style={{
@@ -64,10 +61,10 @@ export const AuroraHero = () => {
           whileTap={{
             scale: 0.985,
           }}
+          onClick={() => navigate("/read")}
           className="group relative flex w-fit items-center gap-1.5 rounded-full px-4 py-2 text-gray-50 transition-colors text-white/70 hover:bg-gray-950/80 hover:text-white/90  "
         >
-          <Join text={"Join us on 26th Jan"} />
-          <h1 className="sm:hidden">Join us on 26th Jan</h1>
+          Experience Magazine
           <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
         </motion.button>
       </div>

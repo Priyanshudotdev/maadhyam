@@ -1,10 +1,8 @@
-import React, { useRef } from "react";
-import Footer from "./Components/Footer";
+import React from "react";
 import NativeJoin from "./Components/NativeJoin";
 import Service from "./Components/Services";
 import Contact from "./Pages/Contact";
 import { AuroraHero } from "./Pages/Hero";
-import LaunchEvent from "./Pages/LaunchEvent";
 
 function App() {
   return (
@@ -13,13 +11,10 @@ function App() {
         <div>
           <AuroraHero />
         </div>
-        <div className="px-5 bg-transparent md:px-6 lg:px-8">
-          <LaunchEvent />
-        </div>
         <div className="px-5 min-h-screen bg-transparent md:px-6 lg:px-8">
           <Service />
         </div>
-        <div className="px-5 min-h-screen bg-transparent md:px-6 lg:px-8">
+        <div className="px-5 mt-6 min-h-screen bg-transparent md:px-6 lg:px-8">
           <Contact />
         </div>
         <div className="px-5 bg-transparent sm:hidden">

@@ -7,6 +7,7 @@ import Team from "./Pages/Team.jsx";
 import PreviousYearMagazine from "./Pages/PreviousYearMagazine.jsx";
 import { FloatingNavbar } from "./Components/FloatingNavbar.jsx";
 import Footer from "./Components/Footer.jsx";
+import Read from "./Pages/Read.jsx";
 
 const navItems = [
   { name: "Team", link: "/team" },
@@ -19,6 +20,7 @@ createRoot(document.getElementById("root")).render(
     <Routes>
       <Route element={<App />} path="/"></Route>
       <Route element={<Team />} path="/team"></Route>
+      <Route element={<Read />} path="/read"></Route>
       <Route
         element={<PreviousYearMagazine />}
         path="/previous-year-magazine"
