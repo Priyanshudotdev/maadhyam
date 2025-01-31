@@ -68,7 +68,7 @@ export const AuroraHero = () => {
           onClick={() => navigate("/read")}
           className="group relative flex w-fit items-center gap-1.5 rounded-full px-4 py-2 text-gray-50 transition-colors text-white/70 hover:bg-gray-950/80 hover:text-white/90 font-bold "
         >
-          Experience Magazine
+          Experience Magazine 2025
           <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
         </motion.button>
       </div>
