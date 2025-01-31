@@ -24,7 +24,7 @@ export const AuroraHero = () => {
 
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #111111 50%, ${color})`;
   const border = useMotionTemplate`1px solid ${color}`;
-  const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
+  const boxShadow = useMotionTemplate`0px 1px 24px ${color}`;
   const textColor = useMotionTemplate`${color}`;
 
   const navigate = useNavigate();
@@ -61,8 +61,11 @@ export const AuroraHero = () => {
           whileTap={{
             scale: 0.985,
           }}
+          style={{
+            border,
+          }}
           onClick={() => navigate("/read")}
-          className="group relative flex w-fit items-center gap-1.5 rounded-full px-4 py-2 text-gray-50 transition-colors text-white/70 hover:bg-gray-950/80 hover:text-white/90  "
+          className="group relative flex w-fit items-center gap-1.5 rounded-full px-4 py-2 text-gray-50 transition-colors text-white/70 hover:bg-gray-950/80 hover:text-white/90 font-bold "
         >
           Experience Magazine
           <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
