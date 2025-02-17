@@ -17,7 +17,7 @@ function App() {
         <div className="px-5 mt-6 min-h-screen bg-transparent md:px-6 lg:px-8">
           <Contact />
         </div>
-        <div className="px-5 bg-transparent sm:hidden">
+        <div className="px-5 m-0 bg-transparent sm:hidden">
           <NativeJoin />
         </div>
       </div>
